@@ -20,7 +20,7 @@ void Ex3(int in_arr[], int n){
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	argc--;
-	int testcase[argc],i;
+	int testcase[50],i;
 	for(i=0; i<argc;i++){
 		testcase[i] = atoi(argv[i+1]);
 	}

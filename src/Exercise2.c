@@ -14,13 +14,36 @@ Ex:
 
 void Ex2(int arr[], int n){
 	//Your codes here
+	for(int i=0;i<n-1;i++){
+		for(int j=i+1;j<n;j++){
+			if(arr[i]%2==0 && arr[j]%2==0 && arr[i]<arr[j]){
+				int tam=arr[i];
+				arr[i]=arr[j];
+				arr[j]=tam;
+			}
+		}
+	}
+
 	
+	for(int i=0;i<n-1;i++){
+		for(int j=i+1;j<n;j++){
+			if(arr[i]%2!=0 && arr[j]%2!=0 && arr[i]>arr[j]){
+				int tam=arr[i];
+				arr[i]=arr[j];
+				arr[j]=tam;
+	     	}
+		}
+	}
+	for (int i = 0;i < n;i++)
+	{
+		printf("%d\n",arr[i]);
+	}	
 }
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	argc--;
-	int testcase[argc],i;
+	int testcase[50],i;
 	for(i=0; i<argc;i++){
 		testcase[i] = atoi(argv[i+1]);
 	}

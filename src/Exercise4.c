@@ -12,15 +12,28 @@ ______________________________________
 #include <stdlib.h>
 #include <math.h>
 
+
+
 int Ex4(int arr[], int n){
 	//Your codes here
-	
+	for(int i=0; i<n-1; i++){
+		if(arr[i]>arr[i+1]){
+			return -1;
+			break;
+		}
+	}
+	for(int i=0; i<n-1; i++){
+		if(arr[i]<arr[i+1]){
+			return 1;
+	    }
+	}
+	return 0;
 }
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	argc--;
-	int testcase[argc],i;
+	int testcase[50],i;
 	for(i=0; i<argc;i++){
 		testcase[i] = atoi(argv[i+1]);
 	}
